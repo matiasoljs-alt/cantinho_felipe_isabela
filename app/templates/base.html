@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fff1f6"><title>{% block title %}Felipe & Isabella 💗{% endblock %}</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span></div>
+<header class="topbar"><a class="brand" href="/">F <span>♡</span> I</a><nav><a class="{% if active == 'home' %}selected{% endif %}" href="/">Início</a><a class="{% if active == 'album' %}selected{% endif %}" href="/album">Nosso álbum</a></nav></header>
+<main class="container">{% block content %}{% endblock %}</main><footer>Feito com carinho, para Felipe & Isabella <span>♥</span></footer><script src="/static/app.js"></script></body></html>

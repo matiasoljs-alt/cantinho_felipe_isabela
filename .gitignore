@@ -1,0 +1,7 @@
+.env
+.env.exampl
+.venv/
+__pycache__/
+*.py[cod]
+data/
+uploads/
