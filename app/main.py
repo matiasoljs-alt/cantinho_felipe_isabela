@@ -13,7 +13,7 @@ from starlette.middleware.sessions import SessionMiddleware
 load_dotenv()
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = Path(os.getenv("DATABASE_PATH", str(ROOT / "data/casal.db")))
-UPLOAD_DIR = Path(os.getenv("UPLOAD_DIR", str(ROOT / "uploads")))
+UPLOAD_DIR = Path("/tmp/uploads" if os.environ.get("VERCEL") else "uploads")
 MAX_UPLOAD_MB = max(1, int(os.getenv("MAX_UPLOAD_MB", "8")))
 MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
 ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "felipe67@")
